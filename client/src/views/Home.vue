@@ -1,9 +1,9 @@
 <!--
  * @Author: Aee 974958672@qq.com
  * @Date: 2023-08-18 11:26:43
- * @LastEditors: Aee 974958672@qq.com
- * @LastEditTime: 2023-08-21 10:58:21
- * @FilePath: \client\src\views\Home.vue
+ * @LastEditors: tanghao 974958672@qq.com
+ * @LastEditTime: 2023-09-02 14:10:30
+ * @FilePath: \shopping\client\src\views\Home.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
@@ -27,7 +27,7 @@
   <!-- 图片导航 -->
   <div class="image-wrap" ref="imageWrap">
     <ul class="image-content">
-      <li class="image-item" v-for="item in imageList" :key="item.categoryId">
+      <li class="image-item" v-for="item in imageList" :key="item.area">
         <div class="img-color">
           <img :src="item.imgUrl" alt="" />
           <div class="color" :style="`background:${item.background}`"></div>
@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, nextTick, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted } from 'vue'
 import BetterScroll from 'better-scroll'
 import HomeHeader from '@/components/HomeHeader.vue'
 import GoodsList from '@/components/GoodsList.vue'
@@ -139,13 +139,9 @@ const imageList = [
     background: 'linear-gradient(100deg, rgb(230, 146, 20) 10px, rgb(228, 165, 47) 20px, rgb(241, 213, 147) 100px)',
   },
 ]
-const refresh = reactive({
-  refreshing: false,
-  loading: false,
-})
 
 // //BScroll
-const imageWrap = ref(null) //ref获取dom结构
+const imageWrap = ref() //ref获取dom结构
 const initScroll = () => {
   new BetterScroll(imageWrap.value, {
     click: true,

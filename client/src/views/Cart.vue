@@ -1,15 +1,15 @@
 <!--
  * @Author: Aee 974958672@qq.com
  * @Date: 2023-08-18 14:46:07
- * @LastEditors: Aee 974958672@qq.com
- * @LastEditTime: 2023-08-18 14:46:10
- * @FilePath: \client\src\views\Cart.vue
+ * @LastEditors: tanghao 974958672@qq.com
+ * @LastEditTime: 2023-09-02 11:52:54
+ * @FilePath: \shopping\client\src\views\Cart.vue
  * @Description: 购物车
 -->
 <template>
   <div>购物车</div>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>
