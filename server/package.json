@@ -1,0 +1,35 @@
+{
+	"name": "shopping",
+	"version": "1.0.0",
+	"description": "node+koa2+mongodb搭建RESTful API风格",
+	"main": "index.js",
+	"scripts": {
+		"dev": "cross-env NODE=development nodemon ./app.js",
+		"rc": "cross-env NODE=production nodemon ./app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.42.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.27.5"
+	},
+	"dependencies": {
+		"cross-env": "^7.0.3",
+		"jsonwebtoken": "^9.0.0",
+		"koa": "^2.14.2",
+		"koa-body": "^6.0.1",
+		"koa-cors": "^0.0.16",
+		"koa-json": "^2.0.2",
+		"koa-jwt": "^4.0.4",
+		"koa-logger": "^3.2.1",
+		"koa-onerror": "^4.2.0",
+		"koa-router": "^12.0.0",
+		"log4js": "4.0.2",
+		"mongoose": "^7.2.2",
+		"mongoose-paginate": "^5.0.3",
+		"mongoose-unique-validator": "^4.0.0",
+		"nodemon": "^2.0.22"
+	}
+}
