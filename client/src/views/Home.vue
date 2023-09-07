@@ -2,7 +2,7 @@
  * @Author: Aee 974958672@qq.com
  * @Date: 2023-08-18 11:26:43
  * @LastEditors: tanghao 974958672@qq.com
- * @LastEditTime: 2023-09-02 14:10:30
+ * @LastEditTime: 2023-09-07 10:56:41
  * @FilePath: \shopping\client\src\views\Home.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -48,9 +48,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import BetterScroll from 'better-scroll'
+import { getAssetsFile } from '@/utils'
 import HomeHeader from '@/components/HomeHeader.vue'
 import GoodsList from '@/components/GoodsList.vue'
-const images = ['../src/assets/images/lb1.jpg', '../src/assets/images/lb2.jpg']
+
+const images = [getAssetsFile('lb1.jpg'), getAssetsFile('lb2.jpg')]
 const menuList = [
   {
     name: '限时秒杀',
@@ -117,25 +119,25 @@ const imageList = [
   {
     area: '一区',
     content: '玩具，装饰工艺',
-    imgUrl: '../src/assets/images/2.png',
+    imgUrl: getAssetsFile('2.png'),
     background: 'linear-gradient(100deg, rgb(38, 161, 202) 10px, rgb(99, 178, 205) 20px, rgb(160, 217, 233) 100px)',
   },
   {
     area: '一区东',
     content: '各种饰品，饰品配件',
-    imgUrl: '../src/assets/images/3.png',
+    imgUrl: getAssetsFile('3.png'),
     background: 'linear-gradient(100deg, rgb(255, 29, 108) 10px, rgb(206, 14, 56) 20px, rgb(230, 110, 122) 100px)',
   },
   {
     area: '二区',
     content: '箱包，钟表，小家电',
-    imgUrl: '../src/assets/images/4.png',
+    imgUrl: getAssetsFile('4.png'),
     background: 'linear-gradient(100deg, rgb(11, 178, 139) 10px, rgb(8, 171, 149) 20px, rgb(134, 237, 197) 100px)',
   },
   {
     area: '二区东',
     content: '家装五金，新能源',
-    imgUrl: '../src/assets/images/5.png',
+    imgUrl: getAssetsFile('5.png'),
     background: 'linear-gradient(100deg, rgb(230, 146, 20) 10px, rgb(228, 165, 47) 20px, rgb(241, 213, 147) 100px)',
   },
 ]

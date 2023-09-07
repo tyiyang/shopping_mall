@@ -1,9 +1,9 @@
 /*
  * @Author: Aee 974958672@qq.com
  * @Date: 2023-08-19 08:48:08
- * @LastEditors: Aee 974958672@qq.com
- * @LastEditTime: 2023-08-19 11:23:20
- * @FilePath: \client\src\utils\request\index.ts
+ * @LastEditors: tanghao 974958672@qq.com
+ * @LastEditTime: 2023-09-07 11:00:46
+ * @FilePath: \shopping\client\src\utils\request\index.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import Request from './request'
@@ -22,7 +22,7 @@ interface IRequestConfig<T, R> extends RequestConfig<IResponse<R>> {
   data?: T
 }
 const request = new Request({
-  baseURL: import.meta.env.VITE_APP_API_BASE_URL,
+  baseURL: `${import.meta.env.VITE_APP_API_BASE_URL}/${import.meta.env.VITE_APP_API_BASE_URL_PREFIX}`,
   timeout: 1000 * 60 * 5,
   interceptors: {
     // 请求拦截器
