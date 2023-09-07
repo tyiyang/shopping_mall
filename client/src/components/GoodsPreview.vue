@@ -2,8 +2,8 @@
  * @Author: tanghao 974958672@qq.com
  * @Date: 2023-08-29 10:31:33
  * @LastEditors: tanghao 974958672@qq.com
- * @LastEditTime: 2023-08-29 10:52:16
- * @FilePath: \client\src\components\GoodsPreview.vue
+ * @LastEditTime: 2023-09-07 15:14:21
+ * @FilePath: \shopping\client\src\components\GoodsPreview.vue
  * @Description: 商品模型预览
  * 
 -->
@@ -62,11 +62,11 @@ onMounted(() => {
   //加载gltf模型
   const loader = new GLTFLoader()
   const dracoLoader = new DRACOLoader()
-  dracoLoader.setDecoderPath('../../public/draco/gltf/')
+  dracoLoader.setDecoderPath('/draco/gltf/')
   loader.setDRACOLoader(dracoLoader)
   //判断../../public/model/${id}.glb是否存在，不存在则不加载
 
-  loader.load(`../../public/model/${id}.glb`, (gltf: { scene: any }) => {
+  loader.load(`/model/${id}.glb`, (gltf: { scene: any }) => {
     //传id让其点击不同商品展示不同模型 id对应商品的id
     // console.log(gltf.scene);
     const bmw = gltf.scene
